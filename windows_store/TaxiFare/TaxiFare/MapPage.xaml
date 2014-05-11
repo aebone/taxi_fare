@@ -5,9 +5,18 @@
     xmlns:local="using:TaxiFare"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    xmlns:bm="using:Bing.Maps"
+    
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <!-- BING MAPS SETTINGS -->
+        <bm:Map Credentials="Aif6bL0ppKSXNeSigt7tmMO7_-Ov6UbICiFYVZLxGoqN7WYiZKBIVjZ88oQgxCbO" x:Name="myMap" MapType="Road" ZoomLevel="12">
+            <bm:Map.Center>
+                <bm:Location Latitude="-30.0277" Longitude="-51.2287"/>
+            </bm:Map.Center>
+        </bm:Map>
+        <!-- END BING MAPS SETTINGS -->
     </Grid>
 </Page>
