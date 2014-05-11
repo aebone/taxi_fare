@@ -27,7 +27,7 @@ namespace TaxiFare
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnPortoAlegre_Click(object sender, RoutedEventArgs e)
         {
             MapPage pg = new MapPage();
             Initial.Children.Clear();

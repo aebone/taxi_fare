@@ -27,5 +27,12 @@ namespace TaxiFare
         {
             this.InitializeComponent();
         }
+
+        private void BtnVoltar_Click(object sender, RoutedEventArgs e)
+        {
+            MainPage mp = new MainPage();
+            Map.Children.Clear();
+            Map.Children.Add(mp);
+        }
     }
 }

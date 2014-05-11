@@ -7,9 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" x:Name="Initial">
+    <Grid x:Name="Initial" Background="#FF404040">
         <TextBlock HorizontalAlignment="Center" Margin="0,0,0,100" TextWrapping="Wrap" Text="Escolha uma cidade:" VerticalAlignment="Center" FontSize="22" FontWeight="Bold"/>
-        <Button Click="Button_Click" Content="Porto Alegre" Margin="0" Background="#E5FFFFFF" Foreground="Black" HorizontalAlignment="Center" BorderBrush="Transparent" />
+        <Button x:Name="BtnPortoAlegre" Click="BtnPortoAlegre_Click" Content="Porto Alegre" Margin="0" Background="#E5FFFFFF" Foreground="Black" HorizontalAlignment="Center" BorderBrush="#E5000000"/>
     </Grid>
     
 </Page>
