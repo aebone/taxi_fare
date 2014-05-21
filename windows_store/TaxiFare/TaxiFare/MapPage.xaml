@@ -10,12 +10,6 @@
     
     mc:Ignorable="d">
 
-    <Page.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Background" Value="Green"/>
-        </Style>
-    </Page.Resources>
-
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="350"/>
@@ -23,33 +17,40 @@
         </Grid.ColumnDefinitions>
 
         <!-- Left Side Panel -->
-        <ScrollViewer Background="Gray">
+        <ScrollViewer Background="#FF383838">
             <StackPanel Margin="10,10,20,10">
-                <!-- Clear Map Button -->
-                <Button Content="Clear Map" Click="ClearMapBtn_Click"
-                       HorizontalAlignment="Right"/>
-                
-                <!-- GPS Input -->
-                <CheckBox Content="GPS" Click="GPS_Checked"
-                  Width="60" Height="25" Background="Gray"
-                  Margin="0,10,100,0" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <StackPanel Orientation="Horizontal" x:Name="LeftHeader" Margin="0,0,0,20">
+                    <!-- Clear Map Button -->
+                    <Button Content="Limpar Mapa" Click="ClearMapBtn_Click"
+                       HorizontalAlignment="Right" Margin="0,0,20,0" Foreground="White" BorderBrush="Transparent" Background="#FF279C27"/>
 
+                    <!-- GPS Input -->
+                    <CheckBox Content="Meu Local" Click="GPS_Checked" Height="25"/>
+                </StackPanel>
 
                 <!-- Route Input -->
-                <TextBlock Text="Route" FontSize="24" Margin="0,10,0,0"/>
+                <TextBlock Text="Rota" FontSize="24" Margin="0,10,0,10" FontWeight="Bold"/>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="From:" FontSize="18"/>
-                    <TextBox Name="FromTbx" Width="220" Margin="10,0,0,0"/>
+                    <TextBlock Text="De:" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBox Name="FromTbx" Width="220" Margin="22,0,0,0"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="To:" FontSize="18"/>
-                    <TextBox Name="ToTbx" Width="220" Margin="33,10,0,10"/>
+                    <TextBlock Text="Para:" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <TextBox Name="ToTbx" Width="220" Margin="10,10,0,10"/>
                 </StackPanel>
-                <Button Content="Get Directions" Click="RouteBtn_Click"
-                       HorizontalAlignment="Right"/>
+                <Button Content="Calcular" Click="RouteBtn_Click"
+                       HorizontalAlignment="Right" BorderBrush="Transparent" Background="#FF279C27"/>
+                <!-- End Route Input -->
 
-                <!-- Route Itinerary Panel -->
-                <StackPanel Name="RouteResults">
+                <!-- Fare -->
+                <StackPanel Name="TaxiFare">
+                    <TextBlock x:Name="ValorTitle" Text="Valor" FontSize="24" Margin="0,10,0,0" FontWeight="Bold" Visibility="Collapsed"/>
+                    <TextBlock x:Name="KmTotal" TextWrapping="Wrap" Text="" FontSize="18"/>
+                </StackPanel>
+                <!-- End Fare -->
+
+                <!-- Route Itinerary Panel -->                
+                <StackPanel Name="RouteResults" Margin="0,20,0,0">
                     <ListBox ItemsSource="{Binding RouteLegs}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
@@ -68,19 +69,19 @@
                                 </ListBox>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
-                    </ListBox>
-                    <TextBlock Text="Route" FontSize="24" Margin="0,10,0,0"/>
-                    <TextBox x:Name="KmTotal" TextWrapping="Wrap" Text=""/>
+                    </ListBox> 
                 </StackPanel>
-                
+                <!-- End Route Itinerary Panel -->
+
             </StackPanel>
         </ScrollViewer>
 
         <!-- Map Area -->
-        <bm:Map Name="PoaMap" Grid.Column="1" Credentials="Aif6bL0ppKSXNeSigt7tmMO7_-Ov6UbICiFYVZLxGoqN7WYiZKBIVjZ88oQgxCbO" MapType="Road" ZoomLevel="12">
+        <bm:Map Name="PoaMap" Grid.Column="1" Credentials="Aif6bL0ppKSXNeSigt7tmMO7_-Ov6UbICiFYVZLxGoqN7WYiZKBIVjZ88oQgxCbO" MapType="Road" ZoomLevel="12" Culture="pt-BR">
             <bm:Map.Center>
                 <bm:Location Latitude="-30.0277" Longitude="-51.2287"/>
             </bm:Map.Center>
         </bm:Map>
+        <!-- End Map Area -->
     </Grid>
 </Page>

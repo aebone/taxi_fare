@@ -137,7 +137,7 @@ namespace TaxiFare
             ClearMap();
  
             string from = FromTbx.Text;
-            string to = ToTbx.Text;           
+            string to = ToTbx.Text;
  
             if (!string.IsNullOrWhiteSpace(from))
             {
@@ -188,7 +188,7 @@ namespace TaxiFare
                         //Add start and end pushpins
                         Pushpin start = new Pushpin()
                         {
-                            Text = "S",
+                            Text = "I",
                             Background = new SolidColorBrush(Colors.Green)
                         };
  
@@ -199,7 +199,7 @@ namespace TaxiFare
  
                         Pushpin end = new Pushpin()
                         {
-                            Text = "E",
+                            Text = "F",
                             Background = new SolidColorBrush(Colors.Red)
                         };
  
@@ -228,7 +228,8 @@ namespace TaxiFare
             {
                 ShowMessage("Invalid 'From' location.");
             }
-        }
 
+            ValorTitle.Visibility = Visibility.Visible;
+        }
     }
 }
