@@ -148,7 +148,6 @@ namespace TaxiFare
                    
                     //Make a request and get the response
                     Response r = await GetResponse(routeRequest);
- 
                     if (r != null &&
                         r.ResourceSets != null &&
                         r.ResourceSets.Length > 0 &&
@@ -162,9 +161,54 @@ namespace TaxiFare
                         LocationCollection locations = new LocationCollection();
 
                         //Get the total route distance
-                        double travelDistance = route.TravelDistance;
-                        KmTotal.Text = travelDistance.ToString();
+                        double TotalDistance = route.TravelDistance;
+                        KmTotal.Text = TotalDistance.ToString();
 
+                        //Calculate TaxiFare
+                        int Hour = DateTime.Now.Hour;
+                        int Day = (int)System.Globalization.CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(DateTime.Now);
+                        string DayOfWeek;
+                        switch (Day)
+                        {
+                            case 1:
+                                DayOfWeek = "Segunda-feira";
+                                break;
+                            case 2:
+                                DayOfWeek = "Terça-feira";
+                                break;
+                            case 3:
+                                DayOfWeek = "Quarta-feira";
+                                break;
+                            case 4:
+                                DayOfWeek = "Quinta-feira";
+                                break;
+                            case 5:
+                                DayOfWeek = "Sexta-feira";
+                                break;
+                            case 6:
+                                DayOfWeek = "Sábado";
+                                break;
+                            case 7:
+                                DayOfWeek = "Domingo";
+                                break;
+                        }
+                        double StartPrice = 4.22;
+                        double Bandeira1 = 2.11;
+                        double Bandeira2 = 2.74;
+                        double TaxiFare;
+                        string Bandeira;
+
+
+                        if (Hour > 20 && Hour < 6) //bandeira 2
+                        {
+                            Bandeira = "Hora agora: " + DateTime.Now.TimeOfDay.ToString(); 
+                            TaxiFare = (TotalDistance * Bandeira2) + StartPrice;
+                        }
+                        else
+                            TaxiFare = (TotalDistance * Bandeira1) + StartPrice;
+
+                       // Bandeira.Text = 
+                        Valor.Text = Day.ToString();
 
                         for (int i = 0; i < routePath.Length; i++)
                         {
@@ -213,6 +257,9 @@ namespace TaxiFare
  
                         //Pass the route to the Data context of the Route Results panel
                         RouteResults.DataContext = route;
+
+                        //Put title "Valor"
+                        ValorTitle.Visibility = Visibility.Visible;
                     }
                     else
                     {
@@ -228,8 +275,6 @@ namespace TaxiFare
             {
                 ShowMessage("Invalid 'From' location.");
             }
-
-            ValorTitle.Visibility = Visibility.Visible;
         }
     }
 }

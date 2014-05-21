@@ -46,6 +46,8 @@
                 <StackPanel Name="TaxiFare">
                     <TextBlock x:Name="ValorTitle" Text="Valor" FontSize="24" Margin="0,10,0,0" FontWeight="Bold" Visibility="Collapsed"/>
                     <TextBlock x:Name="KmTotal" TextWrapping="Wrap" Text="" FontSize="18"/>
+                    <TextBlock x:Name="Valor" TextWrapping="Wrap" Text="" FontSize="18"/>
+                    <TextBlock x:Name="Bandeira" TextWrapping="Wrap" Text="" FontSize="18"/>
                 </StackPanel>
                 <!-- End Fare -->
 
