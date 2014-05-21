@@ -123,9 +123,6 @@ namespace TaxiFare
             PoaMap.Children.Clear();
             routeLayer.Shapes.Clear();
  
-            //Clear the geocode results ItemSource
-            GeocodeResults.ItemsSource = null;
- 
             //Clear the route instructions
             RouteResults.DataContext = null;
         }
@@ -133,100 +130,6 @@ namespace TaxiFare
         private void ClearMapBtn_Click(object sender, RoutedEventArgs e)
         {
             ClearMap();
-        }
-
-        private async void GeocodeBtn_Click(object sender, RoutedEventArgs e)
-        {
-            ClearMap();
- 
-            string query = GeocodeTbx.Text;
- 
-            if (!string.IsNullOrWhiteSpace(query))
-            {
-                //Create the request URL for the Geocoding service
-                Uri geocodeRequest = new Uri(
-                    string.Format("http://dev.virtualearth.net/REST/v1/Locations?q={0}&key={1}",
-                    query, PoaMap.Credentials));
- 
-                //Make a request and get the response
-                Response r = await GetResponse(geocodeRequest);
- 
-                if (r != null &&
-                    r.ResourceSets != null &&
-                    r.ResourceSets.Length > 0 &&
-                    r.ResourceSets[0].Resources != null &&
-                    r.ResourceSets[0].Resources.Length > 0)
-                {
-                    LocationCollection locations = new LocationCollection();
- 
-                    int i = 1;
- 
-                    foreach (BingMapsRESTService.Common.JSON.Location l
-                             in r.ResourceSets[0].Resources)
-                    {
-                        //Get the location of each result
-                        Bing.Maps.Location location =
-                              new Bing.Maps.Location(l.Point.Coordinates[0], l.Point.Coordinates[1]);
- 
-                        //Create a pushpin each location
-                        Pushpin pin = new Pushpin(){
-                            Tag = l.Name,
-                            Text = i.ToString()
-                        };
- 
-                        i++;
- 
-                        //Add a tapped event that will display the name of the location
-                        pin.Tapped += (s, a) =>
-                        {
-                            var p = s as Pushpin;
-                            ShowMessage(p.Tag as string);
-                        };
- 
-                        //Set the location of the pushpin
-                        MapLayer.SetPosition(pin, location);
- 
-                        //Add the pushpin to the map
-                        PoaMap.Children.Add(pin);                     
- 
-                        //Add the coordinates of the location to a location collection
-                        locations.Add(location);
-                    }
- 
-                    //Set the map view based on the location collection
-                    PoaMap.SetView(new LocationRect(locations));
- 
-                    //Pass the results to the item source of the GeocodeResult ListBox
-                    GeocodeResults.ItemsSource = r.ResourceSets[0].Resources;
-                }
-                else
-                {
-                    ShowMessage("No Results found.");
-                }
-            }
-            else
-           {
-                ShowMessage("Invalid Geocode Input.");
-            }
-        }
-
-        private void GeocodeResultSelected(object sender, SelectionChangedEventArgs e)
-        {
-            var listBox = sender as ListBox;
- 
-            if (listBox.SelectedItems.Count > 0)
-            {
-                //Get the Selected Item
-                var item = listBox.Items[listBox.SelectedIndex]
-                           as BingMapsRESTService.Common.JSON.Location;
- 
-                //Get the items location
-                Bing.Maps.Location location =
-                       new Bing.Maps.Location(item.Point.Coordinates[0], item.Point.Coordinates[1]);
- 
-                //Zoom into the location
-                PoaMap.SetView(location, 18);
-            }
         }
 
         private async void RouteBtn_Click(object sender, RoutedEventArgs e)
@@ -253,11 +156,16 @@ namespace TaxiFare
                         r.ResourceSets[0].Resources.Length > 0)
                     {
                         Route route = r.ResourceSets[0].Resources[0] as Route;
- 
+
                         //Get the route line data
                         double[][] routePath = route.RoutePath.Line.Coordinates;
                         LocationCollection locations = new LocationCollection();
- 
+
+                        //Get the total route distance
+                        double travelDistance = route.TravelDistance;
+                        KmTotal.Text = travelDistance.ToString();
+
+
                         for (int i = 0; i < routePath.Length; i++)
                         {
                             if (routePath[i].Length >= 2)
