@@ -1,2 +1,0 @@
-Aplicativo que calcula a tarifa de táxi na cidade de Porto Alegre.
-Desenvolvido para o programa S2B do Centro de Inovação‎ Microsoft/PUCRS.

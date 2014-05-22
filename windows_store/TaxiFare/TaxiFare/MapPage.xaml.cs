@@ -182,31 +182,31 @@ namespace TaxiFare
                         {
                             case 1:
                                 DayOfWeek = "Segunda-feira";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
+                                Agora.Text = "Agora são " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 2:
                                 DayOfWeek = "Terça-feira";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
+                                Agora.Text = "Agora são " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 3:
                                 DayOfWeek = "Quarta-feira";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
+                                Agora.Text = "Agora são " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 4:
                                 DayOfWeek = "Quinta-feira";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
+                                Agora.Text = "Agora são " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 5:
                                 DayOfWeek = "Sexta-feira";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
+                                Agora.Text = "Agora são " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 6:
                                 DayOfWeek = "Sábado";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
+                                Agora.Text = "Agora são " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 7:
                                 DayOfWeek = "Domingo";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
+                                Agora.Text = "Agora são " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                         }
                         if (Day == 7)

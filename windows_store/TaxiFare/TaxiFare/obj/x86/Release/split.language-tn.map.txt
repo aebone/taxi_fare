@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-tn"
+"ResourceDimensions"		"language-tn"
+
+[Files]
+"C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\obj\x86\Release\split.language-tn.pri"			"resources.pri"

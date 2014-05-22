@@ -1,0 +1,1 @@
+C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\TaxiFare.csproj;x86

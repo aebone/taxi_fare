@@ -1,0 +1,7 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\ini\documents\visual studio 2013\projects\taxi_fare\windows_store\taxifare\taxifare\obj\x86\debug\intermediatexaml\taxifare.exe" HashGuid="312ce7b1-0b34-a3ff-38ce-3b136926e659" />
+    <ReferenceAssembly PathName="c:\users\ini\appdata\local\microsoft sdks\windows\v8.1\extensionsdks\bing.maps.xaml\1.313.0825.0\references\commonconfiguration\neutral\bing.maps.winmd" HashGuid="dcdce9e5-521a-6d20-3956-9df814dff813" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>
