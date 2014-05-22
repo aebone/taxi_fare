@@ -223,7 +223,7 @@ namespace TaxiFare
                         }
                         else 
                         {
-                            if (Hour >= 20 && Hour <= 6)
+                            if (Hour >= 20 || Hour <= 6)
                                 Bandeira.Text = "Bandeira 2";
                             else
                             {
@@ -233,7 +233,7 @@ namespace TaxiFare
                         }
 
                         //Not included
-                        NaoInclui.Text = "O cálculo não inclui tempo parado (R$ 14,90 por hora), animais e volumes de grandes proporções: (R$ 6,00) e volume excedente (acima de 3 volumes de mão ou 1 mala: R$ 1,20).";
+                        NaoInclui.Text = "O cálculo não inclui tempo parado (R$ 14,90 por hora), animais e volumes de grandes proporções: (R$ 6,00) e volume excedente (acima de 3 volumes de mão ou 1 mala:  R$ 1,20).";
                                                        
                         //Detailed route
                         for (int i = 0; i < routePath.Length; i++)

@@ -46,7 +46,7 @@
                 <StackPanel Name="TaxiFare">
                     <TextBlock x:Name="Bandeira1" TextWrapping="Wrap" Text="" FontSize="24"/>
                     <TextBlock x:Name="Bandeira2" TextWrapping="Wrap" Text="" FontSize="24"/>
-                    <TextBlock x:Name="Agora" TextWrapping="Wrap" Text="" FontSize="16" FontStyle="Italic"/>
+                    <TextBlock x:Name="Agora" TextWrapping="Wrap" Text="" FontSize="16" FontStyle="Italic" FontWeight="Bold"/>
                     <TextBlock x:Name="Bandeira" TextWrapping="Wrap" Text="" FontSize="18" FontWeight="Bold" Foreground="#FFFBFB00"/>
                     <TextBlock x:Name="Exceto" TextWrapping="Wrap" Text="" FontSize="13" FontStyle="Italic"/>
                     <TextBlock x:Name="NaoInclui" TextWrapping="Wrap" Text="" FontSize="12" Foreground="#FFFBFB00"/>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="4cfbc761-3396-4654-96b7-d3257d2e5190" Publisher="CN=Ini" Version="1.0.0.0" />
+  <Identity Name="26397AlineEbone.TaxiPrice" Publisher="CN=68BCB71E-94A4-4C5F-9081-97CA9E53B0B3" Version="1.1.0.1" />
   <Properties>
     <DisplayName>Taxi Fare</DisplayName>
     <PublisherDisplayName>Aline Ebone</PublisherDisplayName>
