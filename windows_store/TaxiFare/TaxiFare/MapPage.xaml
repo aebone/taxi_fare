@@ -17,12 +17,16 @@
         </Grid.ColumnDefinitions>
 
         <!-- Left Side Panel -->
+        
         <ScrollViewer Background="#FF383838">
             <StackPanel Margin="10,10,20,10">
-                <StackPanel Orientation="Horizontal" x:Name="LeftHeader" Margin="0,0,0,20">
+                <!-- Image Header -->
+                <Image Source="/Assets/TaxiHeader.png" Width="310" Margin="0,0,0,20"/>
+                
+                <StackPanel Orientation="Horizontal" x:Name="LeftHeader" Margin="0,0,0,20">          
                     <!-- Clear Map Button -->
                     <Button Content="Limpar Mapa" Click="ClearMapBtn_Click"
-                       HorizontalAlignment="Right" Margin="0,0,20,0" Foreground="White" BorderBrush="Transparent" Background="#FF279C27"/>
+                       HorizontalAlignment="Right" Margin="0,0,20,0" Foreground="#FF252525" BorderBrush="Transparent" Background="#FDBD10"/>
 
                     <!-- GPS Input -->
                     <CheckBox Content="Meu Local" Click="GPS_Checked" Height="25"/>
@@ -39,7 +43,7 @@
                     <TextBox Name="ToTbx" Width="220" Margin="10,10,0,10"/>
                 </StackPanel>
                 <Button Content="Calcular" Click="RouteBtn_Click"
-                       HorizontalAlignment="Right" BorderBrush="Transparent" Background="#FF279C27"/>
+                       HorizontalAlignment="Right" BorderBrush="Transparent" Background="#FDBD10" Foreground="#FF252525"/>
                 <!-- End Route Input -->
 
                 <!-- Fare -->
@@ -47,9 +51,9 @@
                     <TextBlock x:Name="Bandeira1" TextWrapping="Wrap" Text="" FontSize="24"/>
                     <TextBlock x:Name="Bandeira2" TextWrapping="Wrap" Text="" FontSize="24"/>
                     <TextBlock x:Name="Agora" TextWrapping="Wrap" Text="" FontSize="16" FontStyle="Italic" FontWeight="Bold"/>
-                    <TextBlock x:Name="Bandeira" TextWrapping="Wrap" Text="" FontSize="18" FontWeight="Bold" Foreground="#FFFBFB00"/>
+                    <TextBlock x:Name="Bandeira" TextWrapping="Wrap" Text="" FontSize="18" FontWeight="Bold" Foreground="#FDBD10"/>
                     <TextBlock x:Name="Exceto" TextWrapping="Wrap" Text="" FontSize="13" FontStyle="Italic"/>
-                    <TextBlock x:Name="NaoInclui" TextWrapping="Wrap" Text="" FontSize="12" Foreground="#FFFBFB00"/>
+                    <TextBlock x:Name="NaoInclui" TextWrapping="Wrap" Text="" FontSize="12" Foreground="#FF20D820"/>
                 </StackPanel>
                 <!-- End Fare -->
 
