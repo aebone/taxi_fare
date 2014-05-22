@@ -44,10 +44,10 @@
 
                 <!-- Fare -->
                 <StackPanel Name="TaxiFare">
-                    <TextBlock x:Name="ValorTitle" Text="Valor" FontSize="24" Margin="0,10,0,0" FontWeight="Bold" Visibility="Collapsed"/>
-                    <TextBlock x:Name="KmTotal" TextWrapping="Wrap" Text="" FontSize="18"/>
-                    <TextBlock x:Name="Valor" TextWrapping="Wrap" Text="" FontSize="18"/>
-                    <TextBlock x:Name="Bandeira" TextWrapping="Wrap" Text="" FontSize="18"/>
+                    <TextBlock x:Name="Bandeira1" TextWrapping="Wrap" Text="" FontSize="24"/>
+                    <TextBlock x:Name="Bandeira2" TextWrapping="Wrap" Text="" FontSize="24"/>
+                    <TextBlock x:Name="Agora" TextWrapping="Wrap" Text="" FontSize="16" FontStyle="Italic"/>
+                    <TextBlock x:Name="Bandeira" TextWrapping="Wrap" Text="" FontSize="18" FontWeight="Bold" Foreground="#FFFBFB00"/>
                 </StackPanel>
                 <!-- End Fare -->
 
@@ -74,6 +74,7 @@
                     </ListBox> 
                 </StackPanel>
                 <!-- End Route Itinerary Panel -->
+                <TextBlock Name="TotalRoute" FontSize="14"/>
 
             </StackPanel>
         </ScrollViewer>

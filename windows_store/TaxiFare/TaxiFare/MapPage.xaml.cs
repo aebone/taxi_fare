@@ -162,54 +162,71 @@ namespace TaxiFare
 
                         //Get the total route distance
                         double TotalDistance = route.TravelDistance;
-                        KmTotal.Text = TotalDistance.ToString();
+                        TotalRoute.Text = "Distância Total: " + TotalDistance.ToString();
 
                         //Calculate TaxiFare
+                        double StartPrice = 4.22;
+                        double B1 = 2.11; //2.11/km
+                        double B2 = 2.74; //2.74/km
+                        double TotalB1 = (TotalDistance * B1) + StartPrice;
+                        double TotalB2 = (TotalDistance * B2) + StartPrice;
+
+                        Bandeira1.Text = "Bandeira 1: R$ " + TotalB1.ToString("0.00");
+                        Bandeira2.Text = "Bandeira 2: R$ " + TotalB2.ToString("0.00");
+
                         int Hour = DateTime.Now.Hour;
+                        int Minute = DateTime.Now.Minute;
                         int Day = (int)System.Globalization.CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(DateTime.Now);
                         string DayOfWeek;
                         switch (Day)
                         {
                             case 1:
                                 DayOfWeek = "Segunda-feira";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
                                 break;
                             case 2:
                                 DayOfWeek = "Terça-feira";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
                                 break;
                             case 3:
                                 DayOfWeek = "Quarta-feira";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
                                 break;
                             case 4:
                                 DayOfWeek = "Quinta-feira";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
                                 break;
                             case 5:
                                 DayOfWeek = "Sexta-feira";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
                                 break;
                             case 6:
                                 DayOfWeek = "Sábado";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
                                 break;
                             case 7:
                                 DayOfWeek = "Domingo";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
                                 break;
                         }
-                        double StartPrice = 4.22;
-                        double Bandeira1 = 2.11;
-                        double Bandeira2 = 2.74;
-                        double TaxiFare;
-                        string Bandeira;
-
-
-                        if (Hour > 20 && Hour < 6) //bandeira 2
+                        if (Day == 7)
+                            Bandeira.Text = "Bandeira 2";
+                        else if (Day == 6)
                         {
-                            Bandeira = "Hora agora: " + DateTime.Now.TimeOfDay.ToString(); 
-                            TaxiFare = (TotalDistance * Bandeira2) + StartPrice;
+                            if (Hour >= 15 && Hour <= 24)
+                                Bandeira.Text = "Bandeira 2";
+                            else
+                                Bandeira.Text = "Bandeira 1*";
                         }
-                        else
-                            TaxiFare = (TotalDistance * Bandeira1) + StartPrice;
-
-                       // Bandeira.Text = 
-                        Valor.Text = Day.ToString();
-
+                        else 
+                        {
+                            if (Hour >= 20 || Hour <= 6)
+                                Bandeira.Text = "Bandeira 2";
+                            else
+                                Bandeira.Text = "Bandeira 1*";    
+                        }
+                                                       
+                        //Detailed route
                         for (int i = 0; i < routePath.Length; i++)
                         {
                             if (routePath[i].Length >= 2)
@@ -257,9 +274,6 @@ namespace TaxiFare
  
                         //Pass the route to the Data context of the Route Results panel
                         RouteResults.DataContext = route;
-
-                        //Put title "Valor"
-                        ValorTitle.Visibility = Visibility.Visible;
                     }
                     else
                     {
