@@ -2,7 +2,7 @@
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
   <Identity Name="4cfbc761-3396-4654-96b7-d3257d2e5190" Publisher="CN=Ini" Version="1.0.0.0" />
   <Properties>
-    <DisplayName>TaxiFare</DisplayName>
+    <DisplayName>Taxi Fare</DisplayName>
     <PublisherDisplayName>Aline Ebone</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -15,8 +15,19 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="TaxiFare.App">
-      <m2:VisualElements DisplayName="TaxiFare" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="TaxiFare" ForegroundText="light" BackgroundColor="#464646">
-        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+      <m2:VisualElements DisplayName="Taxi Fare" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Aplicativo que calcula a tarifa de taxi para a cidade de Porto Alegre." ForegroundText="light" BackgroundColor="#373737">
+        <m2:DefaultTile ShortName="Taxi Fare" Square70x70Logo="Assets\Square70x70Logo.png" Wide310x150Logo="Assets\Wide310x150Logo.png" DefaultSize="wide310x150Logo" Square310x310Logo="Assets\Square310x310Logo.png">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+            <m2:ShowOn Tile="wide310x150Logo" />
+            <m2:ShowOn Tile="square310x310Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#373737" />
+        <m2:InitialRotationPreference>
+          <m2:Rotation Preference="landscape" />
+          <m2:Rotation Preference="landscapeFlipped" />
+        </m2:InitialRotationPreference>
       </m2:VisualElements>
     </Application>
   </Applications>

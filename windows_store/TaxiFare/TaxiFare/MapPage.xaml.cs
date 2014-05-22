@@ -162,7 +162,7 @@ namespace TaxiFare
 
                         //Get the total route distance
                         double TotalDistance = route.TravelDistance;
-                        TotalRoute.Text = "Distância Total: " + TotalDistance.ToString();
+                        TotalRoute.Text = "Distância Total: " + TotalDistance.ToString("0.00") + "Km";
 
                         //Calculate TaxiFare
                         double StartPrice = 4.22;
@@ -182,31 +182,31 @@ namespace TaxiFare
                         {
                             case 1:
                                 DayOfWeek = "Segunda-feira";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 2:
                                 DayOfWeek = "Terça-feira";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 3:
                                 DayOfWeek = "Quarta-feira";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 4:
                                 DayOfWeek = "Quinta-feira";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 5:
                                 DayOfWeek = "Sexta-feira";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 6:
                                 DayOfWeek = "Sábado";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                             case 7:
                                 DayOfWeek = "Domingo";
-                                Agora.Text = "Agora é " + Hour + "h" + Minute + " de " + DayOfWeek + ":";
+                                Agora.Text = "Agora é " + Hour + "h" + Minute + "m de " + DayOfWeek + ":";
                                 break;
                         }
                         if (Day == 7)
@@ -216,15 +216,24 @@ namespace TaxiFare
                             if (Hour >= 15 && Hour <= 24)
                                 Bandeira.Text = "Bandeira 2";
                             else
+                            {
                                 Bandeira.Text = "Bandeira 1*";
+                                Exceto.Text = "*Exceto Feriado";
+                            }
                         }
                         else 
                         {
-                            if (Hour >= 20 || Hour <= 6)
+                            if (Hour >= 20 && Hour <= 6)
                                 Bandeira.Text = "Bandeira 2";
                             else
-                                Bandeira.Text = "Bandeira 1*";    
+                            {
+                                Bandeira.Text = "Bandeira 1*";
+                                Exceto.Text = "*Exceto Feriado";
+                            }
                         }
+
+                        //Not included
+                        NaoInclui.Text = "O cálculo não inclui tempo parado (R$ 14,90 por hora), animais e volumes de grandes proporções: (R$ 6,00) e volume excedente (acima de 3 volumes de mão ou 1 mala: R$ 1,20).";
                                                        
                         //Detailed route
                         for (int i = 0; i < routePath.Length; i++)

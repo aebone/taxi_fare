@@ -7,9 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="Initial" Background="#FF404040">
-        <TextBlock HorizontalAlignment="Center" Margin="0,0,0,100" TextWrapping="Wrap" Text="Escolha uma cidade:" VerticalAlignment="Center" FontSize="22" FontWeight="Bold"/>
-        <Button x:Name="BtnPortoAlegre" Click="BtnPortoAlegre_Click" Content="Porto Alegre" Margin="0" Background="#E5FFFFFF" Foreground="Black" HorizontalAlignment="Center" BorderBrush="#E5000000"/>
+    <Grid x:Name="Initial" Background="#FDBD10">  
+        <TextBlock HorizontalAlignment="Center" Margin="0,0,0,200" TextWrapping="Wrap" Text="Escolha uma cidade:" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" Foreground="#FF383838"/>
+        <Button x:Name="BtnPortoAlegre" Click="BtnPortoAlegre_Click" Content="Porto Alegre" Margin="0, 0, 0, 100" Background="#FF383838" HorizontalAlignment="Center" BorderBrush="Transparent"/>
+        <Image Source="/Assets/Taxi.png" Width="566" Height="348" NineGrid="0,-7,0,0" RenderTransformOrigin="0.5,0.5" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,4,20,10">
+            <Image.RenderTransform>
+                <CompositeTransform Rotation="-11"/>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
-    
+
 </Page>

@@ -48,6 +48,8 @@
                     <TextBlock x:Name="Bandeira2" TextWrapping="Wrap" Text="" FontSize="24"/>
                     <TextBlock x:Name="Agora" TextWrapping="Wrap" Text="" FontSize="16" FontStyle="Italic"/>
                     <TextBlock x:Name="Bandeira" TextWrapping="Wrap" Text="" FontSize="18" FontWeight="Bold" Foreground="#FFFBFB00"/>
+                    <TextBlock x:Name="Exceto" TextWrapping="Wrap" Text="" FontSize="13" FontStyle="Italic"/>
+                    <TextBlock x:Name="NaoInclui" TextWrapping="Wrap" Text="" FontSize="12" Foreground="#FFFBFB00"/>
                 </StackPanel>
                 <!-- End Fare -->
 
@@ -74,7 +76,7 @@
                     </ListBox> 
                 </StackPanel>
                 <!-- End Route Itinerary Panel -->
-                <TextBlock Name="TotalRoute" FontSize="14"/>
+                <TextBlock Name="TotalRoute" FontSize="14" HorizontalAlignment="Center" Margin="0,10,0,0"/>
 
             </StackPanel>
         </ScrollViewer>
