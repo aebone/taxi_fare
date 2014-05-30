@@ -10,7 +10,7 @@
     
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#FDBD10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="350"/>
             <ColumnDefinition/>
@@ -21,7 +21,7 @@
         <ScrollViewer Background="#FF383838">
             <StackPanel Margin="10,10,20,10">
                 <!-- Image Header -->
-                <Image Source="/Assets/TaxiHeader.png" Width="310" Margin="0,0,0,20"/>
+                <Image Source="/Assets/TaxiHeader.png" Width="310" Margin="0,10,0,20"/>
                 
                 <StackPanel Orientation="Horizontal" x:Name="LeftHeader" Margin="0,0,0,20">          
                     <!-- Clear Map Button -->

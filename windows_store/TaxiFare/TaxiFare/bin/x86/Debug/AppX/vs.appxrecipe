@@ -17,13 +17,13 @@
     <AppXManifest Include="C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-05-22T18:45:51.588</Modified>
+      <Modified>2014-05-30T00:50:33.608</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\bin\x86\Debug\TaxiFare.exe">
       <PackagePath>TaxiFare.exe</PackagePath>
-      <Modified>2014-05-22T18:34:07.765</Modified>
+      <Modified>2014-05-30T04:35:16.838</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ini\AppData\Local\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Bing.Maps.Xaml\1.313.0825.0\References\commonconfiguration\neutral\Bing.Maps.winmd">
       <PackagePath>Bing.Maps.winmd</PackagePath>
@@ -497,23 +497,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-05-22T18:34:07.479</Modified>
+      <Modified>2014-05-30T00:50:31.819</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-05-22T18:34:07.480</Modified>
+      <Modified>2014-05-30T00:50:31.821</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\bin\x86\Debug\MapPage.xbf">
       <PackagePath>MapPage.xbf</PackagePath>
-      <Modified>2014-05-22T18:34:07.480</Modified>
+      <Modified>2014-05-30T04:34:06.685</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\bin\x86\Debug\Bing.Maps\Themes\Generic.xbf">
       <PackagePath>Bing.Maps\Themes\Generic.xbf</PackagePath>
-      <Modified>2014-05-22T20:02:41.898</Modified>
+      <Modified>2014-05-30T04:35:16.623</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-05-22T18:45:51.151</Modified>
+      <Modified>2014-05-30T00:50:32.866</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -143,9 +143,9 @@ namespace TaxiFare
             {
                 if (!string.IsNullOrWhiteSpace(to))
                 {
-                    //Create the Request URL for the routing service
-                    Uri routeRequest = new Uri(string.Format("http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0={0}&wp.1={1}&rpo=Points&key={2}", from, to, PoaMap.Credentials));
-                   
+                    //Create the Request URL for the routing service - IMPORTANT (c=pt to define a culture in a REST request)
+                    Uri routeRequest = new Uri(string.Format("http://dev.virtualearth.net/REST/V1/Routes/Driving?wp.0={0}&wp.1={1}&rpo=Points&c=pt&key={2}", from, to, PoaMap.Credentials));
+
                     //Make a request and get the response
                     Response r = await GetResponse(routeRequest);
                     if (r != null &&

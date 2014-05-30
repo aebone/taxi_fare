@@ -23,7 +23,6 @@ C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiF
 C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\MainPage.xbf
 C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\MapPage.xbf
 C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\XamlSaveStateFile.xml
-C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\Bing.Maps\Themes\Generic.xbf
 C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\TaxiFare.exe
 C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\TaxiFare.pdb
 C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\TaxiFare.csproj.GenerateResource.Cache
@@ -80,3 +79,4 @@ C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\qualifiers.tx
 C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\obj\x86\Debug\Bing.Maps\Themes\Generic.xbf
