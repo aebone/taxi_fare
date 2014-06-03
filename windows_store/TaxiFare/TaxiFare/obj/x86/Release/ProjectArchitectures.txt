@@ -1,1 +1,0 @@
-C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\TaxiFare.csproj;x86

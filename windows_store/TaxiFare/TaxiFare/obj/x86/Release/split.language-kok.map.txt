@@ -1,6 +1,0 @@
-﻿[ResourceMetadata]
-"ResourceId"			"split.language-kok"
-"ResourceDimensions"		"language-kok"
-
-[Files]
-"C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\obj\x86\Release\split.language-kok.pri"			"resources.pri"

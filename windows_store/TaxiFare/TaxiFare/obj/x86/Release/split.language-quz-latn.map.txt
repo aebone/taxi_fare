@@ -1,6 +1,0 @@
-﻿[ResourceMetadata]
-"ResourceId"			"split.language-quz-latn"
-"ResourceDimensions"		"language-quz"
-
-[Files]
-"C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\obj\x86\Release\split.language-quz-latn.pri"			"resources.pri"

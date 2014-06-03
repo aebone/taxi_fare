@@ -1,0 +1,5 @@
+MainPackage=C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\bin\x86\Release\TaxiFare_1.1.0.14_Bundle\TaxiFare_1.1.0.14_x86.appx
+SymbolPackage=C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\AppPackages\TaxiFare_1.1.0.14_Test\TaxiFare_1.1.0.14_x86.appxsym
+ResourcePack=C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\bin\x86\Release\TaxiFare_1.1.0.14_Bundle\TaxiFare_1.1.0.14_language-pt.appx
+ResourcePack=C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\bin\x86\Release\TaxiFare_1.1.0.14_Bundle\TaxiFare_1.1.0.14_scale-140.appx
+ResourcePack=C:\Users\Ini\Documents\Visual Studio 2013\Projects\taxi_fare\windows_store\TaxiFare\TaxiFare\bin\x86\Release\TaxiFare_1.1.0.14_Bundle\TaxiFare_1.1.0.14_scale-180.appx

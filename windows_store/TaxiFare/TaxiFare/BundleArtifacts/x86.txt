@@ -1,5 +1,0 @@
-MainPackage=C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\bin\x86\Release\TaxiFare_1.1.0.13_Bundle\TaxiFare_1.1.0.13_x86.appx
-SymbolPackage=C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\AppPackages\TaxiFare_1.1.0.13_Test\TaxiFare_1.1.0.13_x86.appxsym
-ResourcePack=C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\bin\x86\Release\TaxiFare_1.1.0.13_Bundle\TaxiFare_1.1.0.13_language-pt.appx
-ResourcePack=C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\bin\x86\Release\TaxiFare_1.1.0.13_Bundle\TaxiFare_1.1.0.13_scale-140.appx
-ResourcePack=C:\Users\Ini\Desktop\windows_store\TaxiFare\TaxiFare\bin\x86\Release\TaxiFare_1.1.0.13_Bundle\TaxiFare_1.1.0.13_scale-180.appx
